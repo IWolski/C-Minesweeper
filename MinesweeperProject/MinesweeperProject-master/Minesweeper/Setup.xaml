@@ -1,0 +1,68 @@
+﻿<Window x:Class="Minesweeper.Setup"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Minesweeper"
+        mc:Ignorable="d"
+        Title="Minesweeper" Height="650" Width="700" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+    <Grid Margin="0,0,0,-237">
+        <Button Name="BackButton" Content="Back" HorizontalAlignment="Center" Margin="250,490,0,0" VerticalAlignment="Top" Height="81" Width="146" Click="BackButton_Click" FontSize="24"/>
+        <Button Name="AboutButton" Content="About" HorizontalAlignment="Center" Margin="0,490,250,0" VerticalAlignment="Top" Height="81" Width="146" Click="AboutButton_Click" FontSize="24"/>
+        <Button Name="EasyButton" Content="Easy (8x8, 10)" HorizontalAlignment="Left" Margin="125,50,0,0" VerticalAlignment="Top" Height="52" Width="225" FontSize="24" Click="EasyButton_Click"/>
+        <Button Name="MediumButton" Content="Medium (16x16, 40)" HorizontalAlignment="Left" Margin="125,140,0,0" VerticalAlignment="Top" Height="52" Width="224" FontSize="24" Click="MediumButton_Click"/>
+        <Button Name="HardButton" Content="Hard (16x30, 99)" HorizontalAlignment="Left" Margin="125,230,0,0" VerticalAlignment="Top" Height="52" Width="224" FontSize="24" Click="HardButton_Click"/>
+        <Button Name="CustomButton" Content="Custom" HorizontalAlignment="Left" Margin="125,320,0,0" VerticalAlignment="Top" Height="52" Width="224" FontSize="24" Click="CustomButton_Click"/>
+        <CheckBox Name="FirstClickCheck" Content="First Click Safe" HorizontalAlignment="Left" Margin="190,419,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Checked="FirstClickCheck_Checked" Unchecked="FirstClickCheck_Unchecked">
+            <CheckBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="2" ScaleY="2"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </CheckBox.RenderTransform>
+        </CheckBox>
+        <ComboBox x:Name="FlagColorComboBox" HorizontalAlignment="Left" Margin="519,60,0,0" VerticalAlignment="Top" Height="42" Width="102" IsReadOnly="True" SelectionChanged="FlagColorComboBox_SelectionChanged">
+            <ComboBoxItem Content="Red (Default)"/>
+            <ComboBoxItem Content="Yellow"/>
+            <ComboBoxItem Content="Green"/>
+            <ComboBoxItem Content="Blue"/>
+        </ComboBox>
+        <Label Content="Flag Colors:" HorizontalAlignment="Left" Margin="402,58,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label Content="Cell Colors:" HorizontalAlignment="Left" Margin="406,148,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <ComboBox x:Name="CellColorComboBox" HorizontalAlignment="Left" Margin="519,150,0,0" VerticalAlignment="Top" Width="102" Height="42" SelectionChanged="CellColorComboBox_SelectionChanged" IsReadOnly="True">
+            <ComboBoxItem Content="Light Gray (Default)"/>
+            <ComboBoxItem Content="Teal"/>
+            <ComboBoxItem Content="Light Yellow"/>
+            <ComboBoxItem Content="Light Pink"/>
+        </ComboBox>
+        <Label Content="Number Colors:" HorizontalAlignment="Left" Margin="366,238,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <ComboBox x:Name="NumberColorComboBox" HorizontalAlignment="Left" Margin="520,240,0,0" VerticalAlignment="Top" Width="102" Height="42" IsReadOnly="True" SelectionChanged="NumberColorComboBox_SelectionChanged">
+            <ComboBoxItem Content="Black (Default)"/>
+            <ComboBoxItem Content="Orange"/>
+            <ComboBoxItem Content="Green"/>
+            <ComboBoxItem Content="Purple"/>
+        </ComboBox>
+        <CheckBox x:Name="LuckCheck" Content="Extra Life Chance" HorizontalAlignment="Left" Margin="457,338,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Checked="LuckCheck_Checked" Unchecked="LuckCheck_Unchecked">
+            <CheckBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="2" ScaleY="2"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </CheckBox.RenderTransform>
+        </CheckBox>
+        <CheckBox x:Name="CharCheck" Content="Special Character Mode" HorizontalAlignment="Left" Margin="439,419,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Checked="CharCheck_Checked" Unchecked="CharCheck_Unchecked">
+            <CheckBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="2" ScaleY="2"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </CheckBox.RenderTransform>
+        </CheckBox>
+    </Grid>
+</Window>

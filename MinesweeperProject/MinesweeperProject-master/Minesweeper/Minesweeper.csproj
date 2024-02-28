@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\Flag.png" />
+    <None Remove="Assets\Flag2.png" />
+    <None Remove="Assets\Flag3.png" />
+    <None Remove="Assets\Flag4.png" />
+    <None Remove="Assets\FlagAudio.wav" />
+    <None Remove="Assets\Mine.png" />
+    <None Remove="Assets\MineAudio.wav" />
+    <None Remove="Assets\Question.png" />
+    <None Remove="Assets\QuestionAudio.wav" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\Flag2.png" />
+    <Resource Include="Assets\Flag3.png" />
+    <Resource Include="Assets\Flag4.png" />
+    <Resource Include="Assets\FlagAudio.wav" />
+    <Resource Include="Assets\Flag.png" />
+    <Resource Include="Assets\MineAudio.wav" />
+    <Resource Include="Assets\Mine.png" />
+    <Resource Include="Assets\QuestionAudio.wav" />
+    <Resource Include="Assets\Question.png" />
+  </ItemGroup>
+
+</Project>
